@@ -29,7 +29,7 @@ public class pregunta04 {
             suma += numero % 10;
             numero /= 10;
         }
-        return suma;
+        return suma;// regresa a sumar
     }
      // Método para reducir un número a un solo dígito
     public static int reducirADigito(int numero) {

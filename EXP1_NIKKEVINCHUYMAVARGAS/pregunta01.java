@@ -23,7 +23,7 @@ public class pregunta01 {
         int contador = 0;
         for (int i = numeroInicial; i <= numeroFinal; i++) {
             System.out.print(i + " ");
-           // Estas líneas de código utilizan un bucle forpara iterar desde el número inicial hasta el número final. 
+           // Estas líneas de código utilizan un bucle for para iterar desde el número inicial hasta el número final. 
            //En cada iteración, el programa imprime el número actual y aumenta el contador. 
            //Cuando el contador alcanza el tamaño del grupo especificado, se muestra una nueva línea 
            //y se le pregunta al usuario si desea continuar visualizando el siguiente grupo de números. Si la respuesta no es "Si" 
