@@ -1,5 +1,5 @@
 package unidad2.ejerciciosNumerosA;
-import java.util.Random;
+
 public class ejercicio03 {
    
         public static void main(String[] args) {
