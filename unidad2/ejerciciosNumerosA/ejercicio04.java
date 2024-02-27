@@ -1,41 +1,39 @@
 package unidad2.ejerciciosNumerosA;
-import java.util.Random;
-    import java.util.Scanner;
+import java.util.Scanner;
 public class ejercicio04 {
     
     
 
         public static void main(String[] args) {
-            Random random = new Random();
-            int numeroSecreto = random.nextInt(101); // Genera un número aleatorio entre 0 y 100
             int intentos = 5;
-    
-            Scanner scanner = new Scanner(System.in);
-    
-            System.out.println("¡Bienvenido al juego de adivinar el número!");
-    
-            while (intentos > 0) {
-                System.out.print("Introduce un número (entre 0 y 100): ");
-                int numeroUsuario = scanner.nextInt();
-    
-                if (numeroUsuario == numeroSecreto) {
-                    System.out.println("¡Felicitaciones! ¡Has adivinado el número secreto!");
-                    break;
-                } else if (numeroUsuario < numeroSecreto) {
-                    System.out.println("El número introducido es menor que el número secreto.");
-                } else {
-                    System.out.println("El número introducido es mayor que el número secreto.");
-                }
-    
-                intentos--;
-                System.out.println("Te quedan " + intentos + " oportunidades.");
+        int numeroSecreto = (int)(Math.random() * 101);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("¡Bienvenido al juego de adivinar el número!");
+        System.out.println("Tienes 5 oportunidades para adivinar un número entre 0 y 100.");
+
+        while (intentos > 0) {
+            System.out.println("\nIntentos restantes: " + intentos);
+            System.out.print("Introduce un número: ");
+            int numero = scanner.nextInt();
+
+            if (numero == numeroSecreto) {
+                System.out.println("¡Felicidades! ¡Has adivinado el número!");
+                break;
+            } else if (numero < numeroSecreto) {
+                System.out.println("El número introducido es menor que el número secreto.");
+            } else {
+                System.out.println("El número introducido es mayor que el número secreto.");
             }
-    
-            if (intentos == 0) {
-                System.out.println("¡Has agotado tus oportunidades! El número secreto era: " + numeroSecreto);
-            }
-    
-            scanner.close();
-            System.out.println("¡Gracias por jugar!");
+
+            intentos--;
         }
-    } 
+
+        if (intentos == 0) {
+            System.out.println("\n¡Lo siento! Has agotado tus oportunidades. El número secreto era: " + numeroSecreto);
+        }
+
+        scanner.close();
+    }
+}
